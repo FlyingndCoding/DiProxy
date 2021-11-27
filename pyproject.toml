@@ -1,0 +1,9 @@
+[tool]
+[tool.poetry]
+authors = ["Your Name <you@example.com>"]
+name = "root"
+description = "root"
+version = "0.0.0"
+[tool.poetry.dependencies]
+aiohttp = "*"
+python = "^3.8"
