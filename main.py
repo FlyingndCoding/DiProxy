@@ -16,15 +16,15 @@ async def _get(request):
 async def _post(request):
 	pass
 
-website_url = 'https://discord-proxy.voltagediscordb.repl.co'
-website_url_no = '//discord-proxy.voltagediscordb.repl.co'
+website_url = 'https://yourdomain.com'
+website_url_no = '//yourdomain.com'
 @web.middleware
 async def ocaml(request, handler):
 	await handler(request)
 	path = request.path
 	print(path)
-	if 'https://discord-proxy.voltagediscordb.repl.co' in path:
-		path.replace('https://discord-proxy.voltagediscordb.repl.co','')
+	if 'https://yourdomain.com' in path:
+		path.replace('https://yourdomain.com','')
 		url = path
 	else:
 	 url = base + path
